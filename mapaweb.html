@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_c36f5677f94f638c74bc8601364747e5 {
+                #map_23971bf1d00cbcc295ecea4b85aeec4d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -47,16 +47,16 @@
 <body>
     
     
-            <div class="folium-map" id="map_c36f5677f94f638c74bc8601364747e5" ></div>
+            <div class="folium-map" id="map_23971bf1d00cbcc295ecea4b85aeec4d" ></div>
         
 </body>
 <script>
     
     
-            var map_c36f5677f94f638c74bc8601364747e5 = L.map(
-                "map_c36f5677f94f638c74bc8601364747e5",
+            var map_23971bf1d00cbcc295ecea4b85aeec4d = L.map(
+                "map_23971bf1d00cbcc295ecea4b85aeec4d",
                 {
-                    center: [-39.83, -73.3],
+                    center: [-39.82, -73.25],
                     crs: L.CRS.EPSG3857,
                     zoom: 11,
                     zoomControl: true,
@@ -65,21 +65,21 @@
                     layersControl: true,
                 }
             );
-            L.control.scale().addTo(map_c36f5677f94f638c74bc8601364747e5);
+            L.control.scale().addTo(map_23971bf1d00cbcc295ecea4b85aeec4d);
 
             
 
         
     
-            var tile_layer_34e63267b693acc3468622fd9028a632 = L.tileLayer(
+            var tile_layer_9cd3075fee7cfadd8d182e899266806e = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 24, "maxZoom": 24, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_c36f5677f94f638c74bc8601364747e5);
+            ).addTo(map_23971bf1d00cbcc295ecea4b85aeec4d);
         
     
             L.control.fullscreen(
                 {"forceSeparateButton": false, "position": "topleft", "title": "Full Screen", "titleCancel": "Exit Full Screen"}
-            ).addTo(map_c36f5677f94f638c74bc8601364747e5);
+            ).addTo(map_23971bf1d00cbcc295ecea4b85aeec4d);
         
     
             var options = {
@@ -89,13 +89,13 @@
             }
             // FeatureGroup is to store editable layers.
             var drawnItems = new L.featureGroup().addTo(
-                map_c36f5677f94f638c74bc8601364747e5
+                map_23971bf1d00cbcc295ecea4b85aeec4d
             );
             options.edit.featureGroup = drawnItems;
-            var draw_control_7b4422847726146601339270fd57f3fd = new L.Control.Draw(
+            var draw_control_6f69adb7ff67b2ff2e1be04df0d2c24f = new L.Control.Draw(
                 options
-            ).addTo( map_c36f5677f94f638c74bc8601364747e5 );
-            map_c36f5677f94f638c74bc8601364747e5.on(L.Draw.Event.CREATED, function(e) {
+            ).addTo( map_23971bf1d00cbcc295ecea4b85aeec4d );
+            map_23971bf1d00cbcc295ecea4b85aeec4d.on(L.Draw.Event.CREATED, function(e) {
                 var layer = e.layer,
                     type = e.layerType;
                 var coords = JSON.stringify(layer.toGeoJSON());
@@ -105,114 +105,107 @@
                 });
                 drawnItems.addLayer(layer);
              });
-            map_c36f5677f94f638c74bc8601364747e5.on('draw:created', function(e) {
+            map_23971bf1d00cbcc295ecea4b85aeec4d.on('draw:created', function(e) {
                 drawnItems.addLayer(e.layer);
             });
             
         
     
-            var measure_control_db242b3d8e9242c3d8636967692a9fec = new L.Control.Measure(
+            var measure_control_9ccbfb7e11ca7c8e50a0b4c3b36d5961 = new L.Control.Measure(
                 {"position": "bottomleft", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
-            map_c36f5677f94f638c74bc8601364747e5.addControl(measure_control_db242b3d8e9242c3d8636967692a9fec);
+            map_23971bf1d00cbcc295ecea4b85aeec4d.addControl(measure_control_9ccbfb7e11ca7c8e50a0b4c3b36d5961);
 
         
     
             L.Control.geocoder(
                 {"collapsed": true, "defaultMarkGeocode": true, "position": "topleft"}
             ).on('markgeocode', function(e) {
-                map_c36f5677f94f638c74bc8601364747e5.setView(e.geocode.center, 11);
-            }).addTo(map_c36f5677f94f638c74bc8601364747e5);
+                map_23971bf1d00cbcc295ecea4b85aeec4d.setView(e.geocode.center, 11);
+            }).addTo(map_23971bf1d00cbcc295ecea4b85aeec4d);
 
         
     
-            map_c36f5677f94f638c74bc8601364747e5.fitBounds(
-                [[-39.83, -73.3], [-39.83, -73.3]],
+            map_23971bf1d00cbcc295ecea4b85aeec4d.fitBounds(
+                [[-39.82, -73.25], [-39.82, -73.25]],
                 {"maxZoom": 11}
             );
         
     
-            var tile_layer_2b1eeae8ed0a57d66de328fb5425c060 = L.tileLayer(
-                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-                {"attribution": "Tiles (C) Esri -- Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxNativeZoom": 22, "maxZoom": 22, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_c36f5677f94f638c74bc8601364747e5);
-        
-    
-            var marker_c092ef163e65310204c3baceed9325ca = L.marker(
+            var marker_ceaceb1ba943f12247eb53a5b869b086 = L.marker(
                 [-39.867, -73.396],
-                {}
-            ).addTo(map_c36f5677f94f638c74bc8601364747e5);
+                {"iconColor": "darkred"}
+            ).addTo(map_23971bf1d00cbcc295ecea4b85aeec4d);
         
     
-        var popup_daabd783c4b9ef833eba9a10e6c1999a = L.popup({"maxWidth": "100%"});
+        var popup_10fa5376e761e518f9de43a9092e4879 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_2a408ed55150dc1e919f200326becb80 = $(`<div id="html_2a408ed55150dc1e919f200326becb80" style="width: 100.0%; height: 100.0%;">     <h4>Fuerte Niebla</h4>     <img src="Tesis_geografía.jpeg" width="200px">     </div>`)[0];
-                popup_daabd783c4b9ef833eba9a10e6c1999a.setContent(html_2a408ed55150dc1e919f200326becb80);
+                var html_cd2f6ecedafb7295c4e1ed6756c67ee2 = $(`<div id="html_cd2f6ecedafb7295c4e1ed6756c67ee2" style="width: 100.0%; height: 100.0%;"><b>Fuerte de Niebla</b><br>Spanish coastal fort (17th–18th cent.).</div>`)[0];
+                popup_10fa5376e761e518f9de43a9092e4879.setContent(html_cd2f6ecedafb7295c4e1ed6756c67ee2);
             
         
 
-        marker_c092ef163e65310204c3baceed9325ca.bindPopup(popup_daabd783c4b9ef833eba9a10e6c1999a)
+        marker_ceaceb1ba943f12247eb53a5b869b086.bindPopup(popup_10fa5376e761e518f9de43a9092e4879)
         ;
 
         
     
     
-            var marker_24b7b78e7b495bc7f7d96e3f9dca5cb9 = L.marker(
+            var marker_c4ab1945a70cca991986f36213e38266 = L.marker(
                 [-39.883, -73.428],
-                {}
-            ).addTo(map_c36f5677f94f638c74bc8601364747e5);
+                {"iconColor": "darkred"}
+            ).addTo(map_23971bf1d00cbcc295ecea4b85aeec4d);
         
     
-        var popup_58896afc1965830b86cdd26d3a061152 = L.popup({"maxWidth": "100%"});
+        var popup_ca85c7d8dc06b7dad91cc44329c21080 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_7df00a35b78f2451da856717d4deae49 = $(`<div id="html_7df00a35b78f2451da856717d4deae49" style="width: 100.0%; height: 100.0%;">     <h4>Castillo de Corral</h4>     <img src="Tesis_geografía.jpeg" width="200px">     </div>`)[0];
-                popup_58896afc1965830b86cdd26d3a061152.setContent(html_7df00a35b78f2451da856717d4deae49);
+                var html_79121e9734dc480b241ddefa4d1f8589 = $(`<div id="html_79121e9734dc480b241ddefa4d1f8589" style="width: 100.0%; height: 100.0%;"><b>Castillo de Corral</b><br>Main stronghold of the Valdivian Fort System.</div>`)[0];
+                popup_ca85c7d8dc06b7dad91cc44329c21080.setContent(html_79121e9734dc480b241ddefa4d1f8589);
             
         
 
-        marker_24b7b78e7b495bc7f7d96e3f9dca5cb9.bindPopup(popup_58896afc1965830b86cdd26d3a061152)
+        marker_c4ab1945a70cca991986f36213e38266.bindPopup(popup_ca85c7d8dc06b7dad91cc44329c21080)
         ;
 
         
     
     
-            var marker_00ed47e909ad91f4ae98cb641e9ec8b1 = L.marker(
+            var marker_e45ca8511675069b7fd93b40a0d42040 = L.marker(
                 [-39.817, -73.245],
-                {}
-            ).addTo(map_c36f5677f94f638c74bc8601364747e5);
+                {"iconColor": "darkred"}
+            ).addTo(map_23971bf1d00cbcc295ecea4b85aeec4d);
         
     
-        var popup_6adb02e0d78ede9f3687a179970876e0 = L.popup({"maxWidth": "100%"});
+        var popup_e9ef88cc1de32a575ff61e9d97923bea = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_52809a2f093893e985537c88f3854970 = $(`<div id="html_52809a2f093893e985537c88f3854970" style="width: 100.0%; height: 100.0%;">     <h4>Museo Histórico y Antropológico</h4>     <img src="Tesis_geografía.jpeg" width="200px">     </div>`)[0];
-                popup_6adb02e0d78ede9f3687a179970876e0.setContent(html_52809a2f093893e985537c88f3854970);
+                var html_18441c29e37fedfc195c61dce5093624 = $(`<div id="html_18441c29e37fedfc195c61dce5093624" style="width: 100.0%; height: 100.0%;"><b>Museo Histórico y Antropológico</b><br>Exhibits on regional history and Mapuche culture.</div>`)[0];
+                popup_e9ef88cc1de32a575ff61e9d97923bea.setContent(html_18441c29e37fedfc195c61dce5093624);
             
         
 
-        marker_00ed47e909ad91f4ae98cb641e9ec8b1.bindPopup(popup_6adb02e0d78ede9f3687a179970876e0)
+        marker_e45ca8511675069b7fd93b40a0d42040.bindPopup(popup_e9ef88cc1de32a575ff61e9d97923bea)
         ;
 
         
     
     
-            var layer_control_8c173936e2eae52d7c82bcfe45bde74c = {
+            var layer_control_a2d930252c32636be8f74c828e6ab962 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_34e63267b693acc3468622fd9028a632,
+                    "openstreetmap" : tile_layer_9cd3075fee7cfadd8d182e899266806e,
                 },
                 overlays :  {
-                    "Esri.WorldImagery" : tile_layer_2b1eeae8ed0a57d66de328fb5425c060,
                 },
             };
             L.control.layers(
-                layer_control_8c173936e2eae52d7c82bcfe45bde74c.base_layers,
-                layer_control_8c173936e2eae52d7c82bcfe45bde74c.overlays,
+                layer_control_a2d930252c32636be8f74c828e6ab962.base_layers,
+                layer_control_a2d930252c32636be8f74c828e6ab962.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_c36f5677f94f638c74bc8601364747e5);
+            ).addTo(map_23971bf1d00cbcc295ecea4b85aeec4d);
         
 </script>
 </html>
